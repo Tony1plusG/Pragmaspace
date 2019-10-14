@@ -1,0 +1,14 @@
+<div class="secondSheet">
+  <dialog class="createForm" id="secondForm" open>
+    <div id="books-menu" class="books-menu">
+      <span class="list" id="list">Posts</span>
+      <ul class="li-list" id="li-list">
+        <li *ngFor="let film of filmsArray">
+          <span> {{film?.}} </span>
+          <span> {{film?.}} </span>
+          <button class="showInformation" [routerLink]="['/createbook/book-list//book-information',book?._id]">Edit</button>
+        </li>
+      </ul>
+    </div>
+  </dialog>
+</div>
