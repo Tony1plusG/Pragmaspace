@@ -1,0 +1,16 @@
+<div class="thirdSheet">
+  <dialog class="createForm" id="thirdForm" open>
+    <div class="Book" id="Book">{{info?.title}} {{info?.author}}</div>
+    <ul *ngIf="commentsInfo != null">
+      <li class="list-of-comments" *ngFor="let comments of commentsInfo">
+        {{comments.comment}}
+        <button class="showCommentInformation" [routerLink]="['/createbook/book-list/book-information', info?._id ,'comment-information', comments?._id]">Show</button>
+      </li>
+    </ul>
+    <button id="Edit" [routerLink]="['/createbook/book-list/book-information', info?._id,'book-refactoring']">Edit</button>
+    <button id="Delete" (click)="deleteBook(info._id)" routerLink="/createbook/book-list">Delete</button>
+    <button id="addComment" [routerLink]="['/createbook/book-list/book-information', info?._id,'add-comment']">Comment</button>
+  </dialog>
+</div>
+
+<router-outlet></router-outlet>

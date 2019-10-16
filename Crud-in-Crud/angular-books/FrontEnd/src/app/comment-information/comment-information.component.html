@@ -1,0 +1,11 @@
+<div class="thirdSheet">
+  <dialog class="createForm" id="thirdForm" open>
+    <div class="Book" id="Book">
+      {{commentInfo?.comment}}
+    </div>
+    <button id="Edit" [routerLink]="['/createbook/book-list/book-information', bookId,'comment-refactoring',commentInfo?._id]">Edit</button>
+    <button id="Delete" (click)="deleteComment(commentInfo?._id)" [routerLink]="['/createbook/book-list/book-information', bookId]">Delete</button>
+  </dialog>
+</div>
+
+<router-outlet></router-outlet>

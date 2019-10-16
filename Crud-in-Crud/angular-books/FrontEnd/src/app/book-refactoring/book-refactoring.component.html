@@ -1,0 +1,9 @@
+<div class="fourthSheet">
+  <dialog class="createForm" id="fourthForm" open>
+    <input type="text" id="newBookTitle"  value="{{title}}" [(ngModel)]="inputNewTitle"/><br>
+    <input type="text" id="newBookBody" value="{{author}}" [(ngModel)]="inputNewAuthor"/><br>
+    <button id="Put" (click)="changeBookInformation()" routerLink="/createbook/book-list">Put</button>
+  </dialog>
+</div>
+
+<router-outlet></router-outlet>

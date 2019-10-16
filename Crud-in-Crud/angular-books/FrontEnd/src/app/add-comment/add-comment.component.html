@@ -1,0 +1,8 @@
+<div class="createComment">
+  <dialog class="commentText" open>
+    <input type="text"  #comment>
+    <button id="submit" (click)="postMethod(comment.value, id)" [routerLink]="['/createbook/book-list/book-information',id]">Submit</button>
+  </dialog>
+</div>
+
+<router-outlet></router-outlet>
